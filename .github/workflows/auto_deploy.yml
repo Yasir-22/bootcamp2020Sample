@@ -22,4 +22,4 @@ jobs:
     - name: Installing Surge
       run: npm  install  --global  surge
     - name:  deploying using surge
-      run : surge ./ aberrant-egg.surge.sh --token ${{secret.Surge_secret }} 
+      run : surge ./ aberrant-egg.surge.sh --token ${{secrets.Surge_secret }} 
