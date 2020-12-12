@@ -1,0 +1,25 @@
+name: BootCamp 2020
+
+on:
+  push:
+    branches: [ main ]
+ 
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+  
+    - name: Installing Node
+      uses: action/setup-node@v2-beta
+      with :
+               node-version: 12 
+        
+      
+    - name: Installing Surge
+      run: npm  install  --global  surge
+    - name: deploying using surge
+      run : ./http://aberrant-egg.surge.sh --toke ${{secret.Surge_secret }} 
