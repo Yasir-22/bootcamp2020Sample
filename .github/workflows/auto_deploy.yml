@@ -2,7 +2,7 @@ name: BootCamp 2020
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master]
  
 
 jobs:
